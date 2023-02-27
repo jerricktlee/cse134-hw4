@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Experimental Page">
+        <meta name="author" content="Jerrick Lee">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Experimental Page</title>
+
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+
+
+    <body>
+
+        <header>
+            <a href="index.html"><b>Jerrick Lee</b></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a> </li>
+                    <li><a href="index.html#projects">Projects</a></li> 
+                    <li><a href="index.html#contact">Contact</a></li> 
+                    <li><a href="experimental.html">Experimental</a></li> 
+                    <li><a href="resume.html" target="_blank" >Resume</a></li> 
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Experiments Page</h1>
+            <details>
+                <summary>What is this page?</summary>
+                <p>This page is a experimental page, kind of like a playground where I test new things out and prototype before publishing onto the main portfolio site.
+                </p>
+            </details>
+            <aside>This is the aside tag, what I'm using it is to describe that above a summary tag was used
+                <br> to provide more detail regarding what this page is. 
+            </aside>
+        </main>
+            <br>
+            The i tag represents text that is set off from its normal prose <i>like this</i>.
+            <br>
+            <p>If I wanted to describe some code in text, I would use the code tag like so: 
+                <br><code>int i = 0</code><br>
+            This makes it easy to differentiate between computer code and text.</p>
+            
+            <audio controls>
+                <source src="audio/wow_whisper.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+            <br>
+              <video width="450" height="320" controls>
+                <source src="videos/coolVideo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            <br>
+        
+            <label for="drinks">Order a drink:</label>
+            <select  name="drinks" id="drinks">
+                <optgroup label="Water">
+                    <option value="Tap">Tap</option>
+                    <option value="Iced">Iced</option>
+                </optgroup>
+                <optgroup label="Fruit Tea">
+                    <option value="Passion Fruit">Passion Fruit</option>
+                    <option value="Strawberry">Strawberry</option>
+                    <option value="Orange">Orange</option>
+                </optgroup>
+                <optgroup label="Milk Teas">
+                    <option value="Ice Cream">Ice Cream</option>
+                    <option value="Oolong">Oolong</option>
+                </optgroup>
+            </select>
+            <br>
+           
+            <label for="game">Choose your favorite game from the list:</label>
+            <input list="games" name="game" id="game">
+            
+            <datalist id="games">
+              <option value="World of Warcraft">
+              <option value="Starcraft">
+              <option value="Diablo">
+              <option value="Hearthstone">
+            </datalist>
+            <br>
+            <p>Experimenting with tables</p>
+            <table>
+                <caption>Artists and Songs</caption>
+                <colgroup>
+                  <col span="1">
+                  <col>
+                </colgroup>
+                <tr>
+                  <th>Song Name</th>
+                  <th>Artist</th>
+                </tr>
+                <tr>
+                  <td>Flowers</td>
+                  <td>Miley Cyrus</td>
+                </tr>
+                <tr>
+                  <td>Unholy</td>
+                  <td>Sam Smith and Kim Petras</td>
+                </tr>
+              </table>
+        <hr>
+        <figure>
+            <img src="images/mister_cat.jpeg" alt="Mister Cat" style="width: 15%">
+            <figcaption>A headshot of the glorious Mister Cat.</figcaption>
+          </figure>
+        
+          <svg width="100" height="100">
+            <circle cx="50" cy="50" r="50" fill="green" />
+          </svg>
+
+          <template>
+            <p>Temporary placeholder</p>
+          </template>
+
+          <canvas id="myCanvas">
+            Your browser does not support the canvas tag.
+            </canvas>
+            
+            <script>
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "#2E8B57";
+            ctx.fillRect(45, 30, 32, 45);
+            </script>
+
+        <footer>
+            <a href=“https:www.linkedin.com/in/jerrick-lee-296763238/>LinkedIn</a>
+            <a href="https://github.com/jerricktlee">GitHub</a>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">Contact</a>
+                </li>
+            </ul>
+        </footer>
+
+    </body>
+</html>

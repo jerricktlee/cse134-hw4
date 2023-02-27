@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Portfolio website for Jerrick Lee">
+        <meta name="author" content="Jerrick Lee">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Jerrick Lee | Portfolio</title>
+
+        <!-- Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,300&family=Open+Sans:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+        <!-- Icon library-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- CSS Stylesheet-->
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+
+    <body>
+
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a> </li>
+                    <li><a href="#projects">Projects</a></li> 
+                    <li><a href="#contact">Contact</a></li> 
+                    <li><a href="experimental.html">Experimental</a></li> 
+                    <li><a href="resume.html" target="_blank" ><i class="fa fa-file-pdf-o" style="font-size:1em"></i>&nbsp;<b>Resume</b></a></li> 
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main-page">
+            <section id="home">
+                <picture class="main-page-img">
+                    <source media="(min-width: 300px)" srcset="images/profile_picture_1.webp">
+                    <img id = "profilePicture1" src="images/profile_picture_1.webp" alt="Jerrick's Profile Picture">
+                </picture>
+                <h1>Jerrick Lee</h1>
+                <div id="typeWriterContainer"><h2><em>Computer Science Student @ UCSD</em></h2></div>
+                <br>
+                <a href="#about" class="directing-button" id="enterPortfolioButton">View My Portfolio</a>
+            </section>
+        </main>
+
+        <section id="about">
+            <div class="grid-container">
+                <picture class="about-grid-image">
+                    <source media="(min-width: 300px)" srcset="images/profile_picture_2.webp">
+                    <img id="profilePicture2" src="images/profile_picture_2.webp" alt="Jerrick smiling in garden">
+                </picture>
+            <div class="about-grid-text">
+                <h2 class="about-grid-h2">Hi there! I'm Jerrick and welcome to my portfolio. I'm an undergraduate student
+                    studying computer science at UCSD.
+                </h2>
+                <p class="about-interest-text">
+                I am a computer science student passionate in software development, particularly in mobile and backend development. I love exploring and learning
+                about the various disciplines of this field. I'm currently looking for full-time software engineering positions.
+                <br><br>
+                On my free time, I enjoy exploring nature, playing video games and board games, and cooking different types of food. I also have a fondness for
+                tuxedo cats. 
+                </p>
+            </div> 
+            <div>
+                <ul class="about-grid-links">
+                    <li><a href="www.linkedin.com/in/jerrick-l-296763238" target="_blank"><img id="linkedIn-favicon" src="images/icons/linkedin-icon.svg" alt="Favicon button that directs to linkedIn."></a></li>
+                    <li><a href="https://github.com/jerricktlee" target="_blank"><img id="github-favicon" src="images/icons/github-icon.svg" alt="Favicon button that directs to GitHub."></a></li>
+                </ul>
+            </div>
+            <div class="about-grid-buttons">
+                    <h3><strong>Learn more about my:</strong></h3>
+                    <br><br>
+                    <a href="#projects" class="directing-button" id="about-to-project-button">Projects</a>
+                    <!-- <a href="resume.html" target="_blank" class="directing-button" id="about-resume-button"><i class="fa fa-file-pdf-o" style="font-size:1em"></i>&nbsp;Resume</a> -->
+                </div> 
+            </div>
+        </section>  
+        <hr>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Here is a collection of both my personal projects and academic projects.
+            </p> 
+            <div class="project-grid">
+                <div class="project-card" id="project1-zooseeker">
+                    <img src="images/project_placeholder_image.png" alt="Project 1 Image" class="project-image">
+                    <div class="project-card-content">
+                        <h2>Project 1</h2>
+                        <p>This is an android app project.</p>
+                        <a href="https://github.com/jerricktlee">Project 1 Link</a>
+                    </div>
+                </div>
+                <div class="project-card" id="project2-discord-bot">
+                    <img src="images/project_placeholder_image.png" alt="Project 2 Image" class="project-image">
+                    <div class="project-card-content">
+                        <h2>Project 2</h2>
+                        <p>This is a discord bot project.</p>
+                        <a href="https://github.com/jerricktlee">Project 2 Link</a>
+                    </div>
+                </div>
+                <div class="project-card" id="project3-bio-links-page">
+                    <img src="images/project_placeholder_image.png" alt="Project 3 Image" class="project-image">
+                    <div class="project-card-content">
+                        <h2>Project 3</h2>
+                        <p>This is a web project.</p>
+                        <a href="https://github.com/jerricktlee">Project 3 Link</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        
+        <section id="contact">
+            <div class="form-container">
+                <h2>Want to connect?</h2>
+                <p id="form-message">I'd love to hear from you! Let me know what you'd like to discuss.</p> 
+                <form action="mailto:jtl008@ucsd.edu" method="POST">
+                        <label for="yourName"><br>
+                            <input type="text" maxlength="256" name="yourName" id="yourName" placeholder="Your name" class="form-input-field" required>
+                        </label>
+                        <br>
+                        <label for="yourEmail">
+                            <input type="email" maxlength="256" name="yourEmail" id="yourEmail" placeholder="Your email address" class="form-input-field" required>
+                        </label>
+                        <br>
+                        <label for="yourPhone"> 
+                            <input type="tel" maxlength="256" name="yourPhone" id="yourPhone" placeholder="Your phone number" class="form-input-field" required>
+                        </label>
+                        <br>
+                        <label for="yourMessage">
+                            <textarea name="yourMessage" id="yourMessage" placeholder="Your message" maxlength="5000" class="form-textarea-field" required></textarea>
+                        </label>
+                        <br>
+                        <input type="submit" value="Send message" data-wait="Sending..." class="form-submit-button">
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h3>Email me</h3>
+                <p class="contact-email-text">
+                    Academic email
+                </p>
+                <a href="mailto:jtl008@ucsd.edu" class="link-contact-email">jtl008@ucsd.edu</a>
+                <p class="contact-email-text">
+                    Personal email
+                </p>
+                <a href="mailto:jerricktlee@gmail.com" class="link-contact-email">jerricktlee@gmail.com</a>
+                <h4>Links </h4> 
+                <ul class="about-grid-links">
+                <li><a href="www.linkedin.com/in/jerrick-l-296763238" target="_blank"><img id="linkedIn-favicon-2" src="images/icons/linkedin-icon.svg" alt="Favicon button that directs to linkedIn."></a></li>
+                <li><a href="https://github.com/jerricktlee" target="_blank"><img id="github-favicon-2" src="images/icons/github-icon.svg" alt="Favicon button that directs to GitHub."></a></li>
+            </ul>
+            </div>
+        </section>
+
+        <hr>
+
+        <footer>
+            <ul>
+                <li><a href="/"><b>Home</b></a></li>
+                <li><a href="#contact"><b>Contact</b></a></li>
+                <li><a href="https://github.com/jerricktlee" target="_blank"><b>Github</b></a></li>
+                <li><a href="www.linkedin.com/in/jerrick-l-296763238" target="_blank"><b>LinkedIn</b></a></li>
+            </ul>
+        </footer>
+
+    </body>
+</html>

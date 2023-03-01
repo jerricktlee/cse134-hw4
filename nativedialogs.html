@@ -30,9 +30,10 @@
                 
                 document.getElementById('safePromptBtn').addEventListener('click', () => {
                     let el = document.getElementById('userOutput');
-                    let purifiedInput = DOMPurify.sanitize(prompt("Safer prompt: Enter a value: "));
-                    if (purifiedInput != null) {
-                   el.innerText = `The value entered is: ${purifiedInput}`;
+                    let userInput = prompt('Enter a value: ');
+                    let purifiedInput = DOMPurify.sanitize(userInput);
+                    if (userInput != null) {
+                   el.innerHTML = `The value entered is: ${purifiedInput}`;
                 }
                 else {
                     el.innerText = cancelMsg;

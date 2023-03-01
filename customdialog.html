@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Custom Dialogs</title>  
+    </head>
+    <body>
+        <h1>Custom Dialogs</h1>
+        <button id="alertBtn">Alert</button>
+        <button id="confirmBtn">Confirm</button>
+        <button id="promptBtn">Prompt</button>
+        <!-- <button id="safePromptBtn">Safer Prompt</button> -->
+        <br><br>
+        <output id="userOutput" value="3"></output>
+        <!--Alert-->
+        <dialog id="alertDialog">
+            <p>Alert pressed!</p>
+            <button id="alertOk">Ok</button>
+        </dialog>
+        <!--Confirm-->
+        <dialog id="confirmDialog">
+            <p>Do you confirm?</p>
+            <button id="confirmCancel">Cancel</button>
+            <button id="confirmOk">Ok</button>
+        </dialog>
+        <!--Prompt-->
+        <dialog id="promptDialog">
+            <p>What is your name?</p>
+            <input id="userInput"></input>
+            <button id="promptCancel">Cancel</button>
+            <button id="promptOk">Ok</button>
+        </dialog>
+        <!--JS Imports-->
+        <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.2/dist/purify.min.js"></script>
+        <script type="module" src="customdialog.js"></script>
+    </body>
+</html>

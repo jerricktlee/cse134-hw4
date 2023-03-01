@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Native Dialogs</title>
+    </head>
+    <body>
+        <h1>Native Dialogs</h1>
+        <button id="alertBtn">Alert</button>
+        <button id="confirmBtn">Confirm</button>
+        <button id="promptBtn">Prompt</button>
+        <button id="safePromptBtn">Safer Prompt</button>
+        <br><br>
+        <output id="userOutput" value="3"></output>
+        <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.2/dist/purify.min.js"></script>
+        <script>
+            let cancelMsg = 'User didn\'t enter anything.';
+            window.addEventListener('DOMContentLoaded', init);
+
+            function init() {
+                document.getElementById('alertBtn').addEventListener('click', () => {
+                    alertAction();
+                })
+
+                let confirmBtn = document.querySelector('#confirmBtn');
+                confirmBtn.addEventListener('click', confirmAction);
+
+                let promptBtn = document.querySelector('#promptBtn');
+                promptBtn.addEventListener('click', promptAction);
+                
+                document.getElementById('safePromptBtn').addEventListener('click', () => {
+                    let el = document.getElementById('userOutput');
+                    let purifiedInput = DOMPurify.sanitize(prompt("Safer prompt: Enter a value: "));
+                    if (purifiedInput != null) {
+                   el.innerText = `The value entered is: ${purifiedInput}`;
+                }
+                else {
+                    el.innerText = cancelMsg;
+                }
+                })
+            }
+
+            function alertAction() {
+                alert("Alert pressed!");
+            }
+
+            function promptAction() {
+                let el = document.getElementById('userOutput');
+                let userInput = prompt('Enter a value: ');
+                if (userInput != null) {
+                   el.innerHTML = `The value entered is: ${userInput}`;
+                }
+                else {
+                    el.innerHTML = cancelMsg;
+                }
+            }
+
+            function confirmAction() {
+                let el = document.getElementById('userOutput');
+                let result = confirm('Do you confirm?');
+                el.innerText = `The value returned by the confirm method is : ${result}`;
+            }
+        </script>
+    </body>
+</html>

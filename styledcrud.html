@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Styled CRUD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,300&family=Open+Sans:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="blogstyles.css">
+</head>
+<body>
+    <section id="sidebar">
+        <h1>Blog Post</h1>
+        <button id="createPostBtn">Create Post</button>
+    </section>
+    <hr>
+    <ul id="blogPostList"></ul>
+
+    <!--Diaglog popup for creating/editing a blog post-->
+    <dialog id="createPostDialog" class="dialogPopup">
+        <form id="postForm" class="dialogForm">
+            <label for="postTitle" class="inputLabels">Title</label><br>
+            <input type="text" id="postTitle" class="dialogInput" name="postTitle" placeholder="Title" required>
+            <br>
+            <label for="postDate" class="inputLabels">Date:</label><br>
+            <input type="date" id="postDate" class="dialogInput" name="postDate" required>
+            <br>
+            <label for="postSummary" class="inputLabels">Summary:</label><br>
+            <textarea id="postSummary" class="dialogInput" name="postSummary" placeholder="Summary" rows="5" cols="30"></textarea>
+            <br>
+            <button type="button" id="cancelSaveBtn" class="dialogBtn">Cancel</button>
+            <button type="submit" class="dialogBtn">Save</button>
+        </form>
+    </dialog>
+    <!--Dialog popup for deleting a blog post-->
+    <dialog id="deletePostDialog" class="dialogPopup">
+        <form id="deleteForm" class="dialogForm">
+            <p>Delete post?</p>
+            <button type="button" id="cancelDeleteBtn" class="dialogBtn">Cancel</button>
+            <button type="submit" class="dialogBtn">Yes</button>
+        </form>
+    </dialog>
+
+    <!--JS import module-->
+    <script type="module" src="styledblog.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD</title>
+</head>
+<body>
+    <section>
+        <h1>Blog Post</h1>
+        <button id="createPostBtn">Create Post</button>
+    </section>
+    <hr>
+    <ul id="blogPostList"></ul>
+
+    <!--Diaglog popup for creating/editing a blog post-->
+    <dialog id="createPostDialog">
+        <form id="postForm">
+            <label for="postTitle">Title</label><br>
+            <input type="text" id="postTitle" name="postTitle" placeholder="Title" required>
+            <br>
+            <label for="postDate">Date:</label><br>
+            <input type="date" id="postDate" name="postDate" required>
+            <br>
+            <label for="postSummary">Summary:</label><br>
+            <textarea id="postSummary" name="postSummary" placeholder="Summary" rows="5" cols="30"></textarea>
+            <br>
+            <button type="button" id="cancelSaveBtn">Cancel</button>
+            <button type="submit">Save</button>
+        </form>
+    </dialog>
+    <!--Dialog popup for deleting a blog post-->
+    <dialog id="deletePostDialog">
+        <form id="deleteForm">
+            <p>Delete post?</p>
+            <button type="button" id="cancelDeleteBtn">Cancel</button>
+            <button type="submit">Yes</button>
+        </form>
+    </dialog>
+
+    <!--JS import module-->
+    <script type="module" src="blog.js"></script>
+</body>
+</html>

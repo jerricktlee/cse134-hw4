@@ -1,0 +1,218 @@
+:root {
+    --default-bg: white;
+    --default-text: black;
+    --invert-textColor: white;
+    --accent-color: rgb(59, 216, 184);
+
+    scroll-behavior: smooth;
+}
+::selection {
+    background: var(--accent-color);
+    color: var(--default-bg);
+}
+  
+::-moz-selection {
+    background: var(--accent-color); 
+    color: var(--default-bg);
+}
+
+@media screen {
+/* Customized scrollbar */
+    ::-webkit-scrollbar {
+        width: 1em;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: hsl(180 100% 97% / 1);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: rgb(123, 138, 135);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: hsl(168 67% 54% / 1);
+    }
+}
+
+@supports (scrollbar-color:  rgb(123, 138, 135) hsl(180 100% 97% / 1)) {
+    * {
+        scrollbar-color:  rgb(123, 138, 135) hsl(180 100% 97% / 1);
+        scrollbar-width: auto;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* flex-direction: row; */
+    font-family: 'Montserrat', sans-serif;
+    background: var(--default-bg);
+    color: var(--default-text);
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    background: #070e1a;
+    color: var(--invert-textColor);
+}
+
+section {
+    min-height: 100vh;
+}
+
+a:hover {
+    color: var(--accent-color)
+}
+
+/* Nav bar */
+header {
+    overflow: hidden;
+    position: fixed;
+    display: flex;
+    background-color: rgb(85, 85, 92); /* Grey is temp color, in future use JS to change nav bar color */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header > nav {
+    width: inherit;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+header > nav li {
+    display: inline-block;
+    padding: 1em 0.5em;
+}
+
+header > nav a {
+    font-style: normal;
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 0.5em;
+    letter-spacing: 1px;
+}
+
+header > nav a:hover {
+    color: var(--accent-color);
+    background-color: azure;
+}
+
+/* Main page */
+#main-page {
+    height: 100%;
+    width: 100%;
+    padding-bottom: 10%;
+}
+
+main h1 {
+    font-size: 1.75em;
+    margin-top: 30px;
+    padding-top: 50px;
+    margin-bottom: 10px;
+}
+/* main h2 {
+    font-size: 8em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+} */
+
+#typeWriterContainer {
+    display: inline-block;
+}
+main h2 {
+    font-size: 8em;
+    margin-top: 30px;
+    margin-bottom:10px;
+    border-right: 15px solid;
+    border-right-color: var(--accent-color);
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 1s steps(3),
+        cursor .4s step-end infinite alternate;
+}
+
+main p {
+    font-size: 1.5em;
+    padding: 15px;
+}
+
+main a {
+    padding: 15px;
+}
+
+
+/* cursor blinking animation */
+@keyframes cursor {
+    50% {border-color: transparent}
+}
+
+/* typing animation */
+@keyframes typing {
+    from {width: 0}
+}
+
+.directing-button {
+    font-size: 1rem;
+    display: inline-block;
+    cursor: pointer;
+    color: var(--default-text);
+    text-decoration: none;
+    padding: 1em 1.75em;
+    border: var(--default-text) .125em solid;
+    border-radius: .5em;
+}
+
+#enterPortfolioButton {
+    color: var(--invert-textColor);
+    border-color: var(--invert-textColor);
+}
+
+#enterPortfolioButton:hover {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    background-color: rgba(115, 116, 116, 0.27);
+}
+footer ul {
+    padding: 2.5%;
+    display: flex;
+    justify-content: center;
+}
+
+footer li{
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+footer a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color:var(--default-text);
+}
+
+footer a:hover {
+    color:var(--accent-color);
+}
+

@@ -16,6 +16,15 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- CSS Stylesheet-->
         <link rel="stylesheet" type="text/css" href="styles.css">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JM4T40GF2G"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-JM4T40GF2G');
+        </script>
     </head>
 
     <body>
@@ -90,6 +99,18 @@
                     <div class="project-card-content">
                         <h2>Project 1</h2>
                         <p>This is an android app project.</p>
+                        <div class="popup" id="popup-1">
+                            <div class="overlay"></div>
+                            <div class="content">
+                                <div class="close-btn" onclick="togglePopup1()">&times;</div>
+                                <h1>Project 1</h1>
+                                <p>Introduction about the project and skills: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <img src="images/project_placeholder_image.png" alt="Project 1 Image" class="popup-project-image" width="200px">
+                                <p>In depth discussion about the projec and how it was implemented: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+            
+                        <button id="project-btn-1" class="project-btns" onclick="togglePopup1()">Show Popup</button>
                         <a href="https://github.com/jerricktlee">Project 1 Link</a>
                     </div>
                 </div>
@@ -98,6 +119,18 @@
                     <div class="project-card-content">
                         <h2>Project 2</h2>
                         <p>This is a discord bot project.</p>
+                        <div class="popup" id="popup-2">
+                            <div class="overlay"></div>
+                            <div class="content">
+                                <div class="close-btn" onclick="togglePopup2()">&times;</div>
+                                <h1>Project 2</h1>
+                                <p>Introduction about the project and skills: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <img src="images/project_placeholder_image.png" alt="Project 2 Image" class="popup-project-image" width="200px">
+                                <p>In depth discussion about the projec and how it was implemented: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+            
+                        <button id="project-btn-2" class="project-btns" onclick="togglePopup2()">Show Popup</button>
                         <a href="https://github.com/jerricktlee">Project 2 Link</a>
                     </div>
                 </div>
@@ -106,6 +139,18 @@
                     <div class="project-card-content">
                         <h2>Project 3</h2>
                         <p>This is a web project.</p>
+                        <div class="popup" id="popup-3">
+                            <div class="overlay"></div>
+                            <div class="content">
+                                <div class="close-btn" onclick="togglePopup3()">&times;</div>
+                                <h1>Project 3</h1>
+                                <p>Introduction about the project and skills: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <img src="images/project_placeholder_image.png" alt="Project 3 Image" class="popup-project-image" width="200px">
+                                <p>In depth discussion about the projec and how it was implemented: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+            
+                        <button id="project-btn-3" class="project-btns" onclick="togglePopup3()">Show Popup</button>
                         <a href="https://github.com/jerricktlee">Project 3 Link</a>
                     </div>
                 </div>
@@ -168,5 +213,19 @@
             </ul>
         </footer>
 
+        <script>
+            function togglePopup1() {
+                document.getElementById("popup-1").classList.toggle("active");
+
+            }
+            function togglePopup2() {
+                document.getElementById("popup-2").classList.toggle("active");
+
+            }
+            function togglePopup3() {
+                document.getElementById("popup-3").classList.toggle("active");
+
+            }
+        </script>
     </body>
 </html>

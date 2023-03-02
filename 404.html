@@ -7,11 +7,19 @@
     <meta name="author" content="Jerrick Lee">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Page Not Found</title>
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,300&family=Open+Sans:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+    <!-- Icon library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS Stylesheet-->
+    <link rel="stylesheet" type="text/css" href="404styles.css">
+
 </head>
 <body>
 
     <header>
-        <a href="index.html"><b>Jerrick Lee</b></a>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -24,24 +32,24 @@
         </nav>
     </header>
     
-    <main>
-        <h1>Page Not Found</h1>
-        <h2>404</h2>
-        <p>The page you were looking for doesn't exist</p>
-        <p>Return to the home page</p>
-        <button>Home</button>
+    <main id="main-page">
+        <section>
+            <h1>Page Not Found</h1>
+            <div id="typeWriterContainer"><h2><em>404</em></h2></div>
+            <p id="p1">The page you were looking for doesn't exist</p>
+            <p id="p2">Return to the home page</p>
+            <a href="index.html" class="directing-button" id="enterPortfolioButton">Return Home</a>
+        </section>
     </main>
 
     <hr>
 
     <footer>
-        <a href=“https:www.linkedin.com/in/jerrick-lee-296763238/>LinkedIn</a>
-        <a href="https://github.com/jerricktlee">GitHub</a>
         <ul>
-            <li>
-                <a href="index.html">Home</a>
-                <a href="index.html#about">Contact</a>
-            </li>
+            <li><a href="/"><b>Home</b></a></li>
+            <li><a href="#contact"><b>Contact</b></a></li>
+            <li><a href="https://github.com/jerricktlee" target="_blank"><b>Github</b></a></li>
+            <li><a href="www.linkedin.com/in/jerrick-l-296763238" target="_blank"><b>LinkedIn</b></a></li>
         </ul>
     </footer>
     
